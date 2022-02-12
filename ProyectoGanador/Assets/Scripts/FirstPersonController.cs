@@ -249,20 +249,20 @@ namespace StarterAssets
 
         private void Attack()
         {
-            if (_input.attack)
+            if (_input.attack && _batAnim.GetInteger("Random") == 0)
             {
                 _input.attack = false;
                 _batHitCol.enabled = true;
-                //_batAnim.Play();
-
-                startTimer = 0.7f;
+                _batAnim.SetInteger("Random", Random.Range(1, 3));
+                startTimer = 0.5f;
             }
-            else if (_batHitCol.enabled)
+            else if (_batAnim.GetInteger("Random") != 0)
             {
                 startTimer -= Time.deltaTime;
                 if (startTimer <= 0)
                 {
                     _batHitCol.enabled = false;
+                    _batAnim.SetInteger("Random", 0);
                 }
             }
         }

@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
         if (peopleToCreate > childs.Count || peopleToCreate > prefabs.Count)
         {
-            Debug.LogError("Cagaste, crea más hijos o más refabs de personas");
+            Debug.LogError("Cagaste, crea mï¿½s hijos o mï¿½s refabs de personas");
             return;
         }
         for (int i = 0; i < peopleToCreate; i++)
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        int peopleInLab = spawner.transform.GetChildCount() / labNum;
+        int peopleInLab = spawner.transform.childCount / labNum;
         int firstToReestart = peopleInLab * lab;
 
         for (int i = 0; i < peopleInLab; i++)
