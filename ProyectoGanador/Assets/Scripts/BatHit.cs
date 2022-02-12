@@ -22,6 +22,8 @@ public class BatHit : MonoBehaviour
         if (other.attachedRigidbody != null)
         {
             other.attachedRigidbody.AddForce(Camera.main.transform.forward*8, ForceMode.Impulse);
+
+            Debug.Log("Mona china golpeada");
             //batCol.enabled = false;
         }
     }
