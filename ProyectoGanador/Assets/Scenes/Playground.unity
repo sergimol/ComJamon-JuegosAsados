@@ -606,6 +606,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bb785d152d8e5df40a6cf3a923f809b2, type: 2}
+    - target: {fileID: 7879817222259614728, guid: aaad0486827867b43ad0676dc07dfb0e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7879817222259614729, guid: aaad0486827867b43ad0676dc07dfb0e, type: 3}
       propertyPath: m_RootOrder
       value: 0
