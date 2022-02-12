@@ -253,7 +253,7 @@ namespace StarterAssets
             {
                 _input.attack = false;
                 _batHitCol.enabled = true;
-                _batAnim.SetInteger("Random", Random.Range(1, 3));
+                _batAnim.SetInteger("Random", Random.Range(1, 4));
                 startTimer = 0.5f;
             }
             else if (_batAnim.GetInteger("Random") != 0)
