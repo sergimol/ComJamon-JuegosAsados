@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-3057422212719433413
+--- !u!1102 &-6033607860070709095
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaricoWalk
+  m_Name: Dice Idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 73a3bfc885d2be94b8abffd93a3ca071, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: af5f604b614f230438a32e2015292265, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -58,8 +58,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -3057422212719433413}
-    m_Position: {x: 384.8412, y: -41.55612, z: 0}
+    m_State: {fileID: -6033607860070709095}
+    m_Position: {x: 416.66956, y: 69.46365, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -69,7 +69,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 180, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -3057422212719433413}
+  m_DefaultState: {fileID: -6033607860070709095}
 --- !u!1107 &4012547387936015372
 AnimatorStateMachine:
   serializedVersion: 6
