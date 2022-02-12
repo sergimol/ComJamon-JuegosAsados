@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
     public void createChild()
     {
         if (person == null) return;
-        if (this.transform.childCount == 1)
+        if (this.transform.childCount == 1)    //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
             Destroy(this.transform.GetChild(0).gameObject);
         Instantiate(person, this.transform.position, this.transform.rotation, this.transform);
     }
