@@ -53,7 +53,7 @@ namespace StarterAssets
         [SerializeField]
         GameObject bat;
 
-        private SphereCollider _batHitCol;
+        private CapsuleCollider _batHitCol;
         private Animator _batAnim;
         // cinemachine
         private float _cinemachineTargetPitch;
@@ -94,7 +94,7 @@ namespace StarterAssets
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
             _playerInput = GetComponent<PlayerInput>();
-            _batHitCol = bat.GetComponent<SphereCollider>();
+            _batHitCol = bat.GetComponent<CapsuleCollider>();
             _batAnim = bat.GetComponent<Animator>();
 
             // reset our timeouts on start
@@ -254,7 +254,7 @@ namespace StarterAssets
                 _input.attack = false;
                 _batHitCol.enabled = true;
                 _batAnim.SetInteger("Random", Random.Range(1, 4));
-                startTimer = 0.5f;
+                startTimer = 0.25f;
             }
             else if (_batAnim.GetInteger("Random") != 0)
             {

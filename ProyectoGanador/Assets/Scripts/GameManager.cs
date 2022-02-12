@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     List<Transform> prefabs;
 
+    private List<Transform> children;
     void Awake()
     {
         if (instance == null)
@@ -31,45 +32,46 @@ public class GameManager : MonoBehaviour
     {
         Random.InitState((int)DateTime.Now.Ticks);
         InicializarPeople();
+        ClassificationManager.instanceCM.startCM();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void InicializarPeople()
     {
-        List<Transform> childs = new List<Transform>();
+       children = new List<Transform>();
 
         foreach (Transform child in spawner.transform)
         {
-            childs.Add(child);
+            children.Add(child);
         }
 
-        Mezcla(childs);
+        Mezcla(children);
         Mezcla(prefabs);
 
-        if (peopleToCreate > childs.Count || peopleToCreate > prefabs.Count)
+        if (peopleToCreate > children.Count || peopleToCreate > prefabs.Count)
         {
             Debug.LogError("Cagaste, crea m�s hijos o m�s refabs de personas");
             return;
         }
         for (int i = 0; i < peopleToCreate; i++)
         {
-            childs[i].GetComponent<Spawner>().setPrefab(prefabs[i]);
+            children[i].GetComponent<Spawner>().setPrefab(prefabs[i]);
         }
     }
 
-    private void Mezcla(List<Transform> list)
+    public void Mezcla<T>(List<T> list)
     {
         int n = list.Count;
         while (n > 1)
         {
             n--;
             int k = Random.Range(0, n + 1);
-            Transform value = list[k];
+            T value = list[k];
             list[k] = list[n];
             list[n] = value;
         }
@@ -90,5 +92,15 @@ public class GameManager : MonoBehaviour
         {
             spawner.transform.GetChild(firstToReestart + i).GetComponent<Spawner>().createChild();
         }
+    }
+
+    public int getNumPeople()
+    {
+        return peopleToCreate;
+    }
+
+    public List<Transform> getSpawnList()
+    {
+        return children;
     }
 }
