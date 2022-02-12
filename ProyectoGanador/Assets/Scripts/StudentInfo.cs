@@ -9,11 +9,13 @@ public class StudentInfo : MonoBehaviour
     int iD;
     bool upper = false;
 
+    int lab;
     Animator anim;
     SphereCollider col;
 
     private void Start()
     {
+        lab = 0;
         anim = this.gameObject.GetComponent<Animator>();
 
         col = this.gameObject.GetComponent<SphereCollider>();
@@ -26,7 +28,6 @@ public class StudentInfo : MonoBehaviour
             col.enabled = false;
 
             ClassificationManager.instanceCM.npcGolpeado(iD);
-            this.transform.GetComponentInParent<Spawner>().time = true;
         }
     }
 
@@ -39,9 +40,18 @@ public class StudentInfo : MonoBehaviour
     {
         return iD;
     }
+    public int getLab()
+    {
+        return lab;
+    }
 
     public bool getUpper()
     {
         return upper;
+    }
+
+    public void SetLab(int i)
+    {
+        lab = i;
     }
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClassificationManager : MonoBehaviour
 {
@@ -11,10 +13,12 @@ public class ClassificationManager : MonoBehaviour
 
     [SerializeField]
     int posIni;
+    [SerializeField]
+    GameObject TV;
 
     private void Awake()
     {
-        instanceCM = this; 
+        instanceCM = this;
     }
     // Start is called before the first frame update
     public void startCM()
@@ -22,11 +26,11 @@ public class ClassificationManager : MonoBehaviour
         posJugador = posIni - 1;
         people = new List<StudentInfo>();
         man = GameManager.instance;
-        List<Transform> children =  man.getSpawnList();
+        List<Transform> children = man.getSpawnList();
 
         for (int i = 0; i < children.Count; i++)
         {
-            if (children[i].childCount == 1)  //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
+            if (children[i].childCount == 1)        //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
             {
                 people.Add(children[i].GetChild(0).gameObject.GetComponent<StudentInfo>());
             }
@@ -36,13 +40,13 @@ public class ClassificationManager : MonoBehaviour
 
         people[posJugador].setUpper(true);
 
-        log();
+        ActTV();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void npcGolpeado(int iD)
@@ -57,7 +61,57 @@ public class ClassificationManager : MonoBehaviour
 
         people[posJugador].setUpper(true);
 
-        log();
+
+    }
+
+    private void ActTV()
+    {
+        int i = 0;
+        bool up = false, down = false;
+
+        while (!up && !down && i < 4)
+        {
+            i++;
+            if (posJugador + 1 - i < 0)
+            {
+                up = true;
+            }
+            if (posJugador + i > people.Count)
+            {
+                down = true;
+            }
+        }
+
+        int ini = 0;
+        if (!up && !down) ini = posJugador - 3;
+        else if (up) ini = 0;
+        else if (down) ini = people.Count - 9;
+
+        for (int j = 0; j < 9; j++)
+        {
+            Transform line = TV.transform.GetChild(0).GetChild(2).GetChild(j);
+            line.GetChild(1).GetComponent<Image>().color = Color.cyan;
+            line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j).ToString();
+            bool misMuertos = false;
+            if (ini + j > posJugador)
+            {
+                j--;
+                misMuertos = true;
+            }
+            line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
+            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + j].getLab().ToString();
+            if (misMuertos) j++;
+
+            if (ini + j == posJugador)
+            {
+                j++;
+                line = TV.transform.GetChild(0).GetChild(2).GetChild(j);
+                line.GetChild(1).GetComponent<Image>().color = Color.green;
+                line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j).ToString();
+                line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
+                line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + j].getLab().ToString();
+            }
+        }
     }
 
     private void subirPuesto()
@@ -77,8 +131,8 @@ public class ClassificationManager : MonoBehaviour
 
         Debug.Log(posJugador);
         for (int i = 0; i < people.Count; i++)
-        {          
-           Debug.Log("ID: " + people[i].getID() + " Upper: " + people[i].getUpper());
+        {
+            Debug.Log("ID: " + people[i].getID() + " Upper: " + people[i].getUpper());
         }
     }
 }
