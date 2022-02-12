@@ -30,7 +30,8 @@ public class MeshDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        DestroyMesh();
+        if(collision.gameObject.GetComponent<BatHit>())
+            DestroyMesh();
     }
 
     private void DestroyMesh()
