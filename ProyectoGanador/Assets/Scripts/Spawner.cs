@@ -6,7 +6,6 @@ public class Spawner : MonoBehaviour
 {
     private GameObject person;
     float t = 0;
-    public bool time = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,16 +15,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (time)
-        {
-            t += Time.deltaTime;
-            if (t > 2)
-            {
-                createChild();
-                t = 0;
-                time = false;
-            }
-        }
+        
     }
 
     public void setPrefab(Transform t)

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [SerializeField]
-    GameObject spawner;
+    Transform spawner;
     [SerializeField]
     int peopleToCreate, labNum;
     [SerializeField]
@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour
 
     void InicializarPeople()
     {
-       children = new List<Transform>();
+        children = new List<Transform>();
 
-        foreach (Transform child in spawner.transform)
+        foreach (Transform child in spawner)
         {
             children.Add(child);
         }
@@ -61,6 +61,15 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < peopleToCreate; i++)
         {
             children[i].GetComponent<Spawner>().setPrefab(prefabs[i]);
+        }
+
+        int comPorLab = spawner.childCount / labNum;
+        for (int i = 0; i < spawner.childCount; i++)
+        {
+            if (spawner.GetChild(i).transform.childCount > 0)        //CAMBIAR CUANDO PONGAMOS MÁS HIJOS
+            {
+                spawner.GetChild(i).GetChild(0).gameObject.GetComponent<StudentInfo>().SetLab(i / comPorLab);
+            }
         }
     }
 
@@ -85,12 +94,12 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        int peopleInLab = spawner.transform.childCount / labNum;
+        int peopleInLab = spawner.childCount / labNum;
         int firstToReestart = peopleInLab * lab;
 
         for (int i = 0; i < peopleInLab; i++)
         {
-            spawner.transform.GetChild(firstToReestart + i).GetComponent<Spawner>().createChild();
+            spawner.GetChild(firstToReestart + i).GetComponent<Spawner>().createChild();
         }
     }
 
