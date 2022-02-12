@@ -20,7 +20,7 @@ public class RagDollActivator : MonoBehaviour
         {
             anim.enabled = false;
 
-            col.enabled = false;
+            col.enabled = false;    
         }
     }
 }
