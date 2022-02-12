@@ -9,10 +9,22 @@ public class StudentInfo : MonoBehaviour
     int iD;
     bool upper = false;
 
+    Animator anim;
+    SphereCollider col;
+
+    private void Start()
+    {
+        anim = this.gameObject.GetComponent<Animator>();
+
+        col = this.gameObject.GetComponent<SphereCollider>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<BatHit>() != null)
         {
+            anim.enabled = false;
+            col.enabled = false;
+
             ClassificationManager.instanceCM.npcGolpeado(iD);
             this.transform.GetComponentInParent<Spawner>().time = true;
         }
