@@ -22,12 +22,14 @@ public class StudentInfo : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Puto tonto");
         if (collision.gameObject.GetComponent<BatHit>() != null)
         {
             anim.enabled = false;
             col.enabled = false;
 
-            ClassificationManager.instanceCM.npcGolpeado(iD);
+
+            //ClassificationManager.instanceCM.npcGolpeado(iD);
         }
     }
 
