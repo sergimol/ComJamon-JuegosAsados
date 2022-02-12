@@ -12,8 +12,9 @@ public class StudentInfo : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<BatHit>() != null)
+        {
             ClassificationManager.instanceCM.npcGolpeado(iD);
-        this.enabled = false;
+        }
     }
 
     public void setUpper(bool b)

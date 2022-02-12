@@ -19,7 +19,7 @@ public class ClassificationManager : MonoBehaviour
     // Start is called before the first frame update
     public void startCM()
     {
-        posJugador = posIni;
+        posJugador = posIni - 1;
         people = new List<StudentInfo>();
         man = GameManager.instance;
         List<Transform> children =  man.getSpawnList();
@@ -62,12 +62,14 @@ public class ClassificationManager : MonoBehaviour
 
     private void subirPuesto()
     {
-        posJugador--;
+        if (posJugador >= 0)
+            posJugador--;
     }
 
     private void bajarPuesto()
     {
-        posJugador++;
+        if (posJugador < people.Count - 1)
+            posJugador++;
     }
 
     private void log()
@@ -76,7 +78,7 @@ public class ClassificationManager : MonoBehaviour
         Debug.Log(posJugador);
         for (int i = 0; i < people.Count; i++)
         {          
-           Debug.Log("ID: " + people[i].getID() + "Upper: " + people[i].getUpper());
+           Debug.Log("ID: " + people[i].getID() + " Upper: " + people[i].getUpper());
         }
     }
 }

@@ -1365,6 +1365,7 @@ GameObject:
   - component: {fileID: 5907774719029406945}
   - component: {fileID: 5907774719029406944}
   - component: {fileID: 5907774719029406951}
+  - component: {fileID: 1857017775543626330}
   m_Layer: 8
   m_Name: MaricaWalking
   m_TagString: Untagged
@@ -1457,6 +1458,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &1857017775543626330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6718746256736965044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a53f49c71a51744a469223c2b97f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iD: 0
 --- !u!1 &6843678486027776751
 GameObject:
   m_ObjectHideFlags: 0

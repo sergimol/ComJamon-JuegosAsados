@@ -1055,6 +1055,7 @@ GameObject:
   - component: {fileID: 5246724694859401016}
   - component: {fileID: 5246724694859401021}
   - component: {fileID: 5246724694859401017}
+  - component: {fileID: 4524184131870187475}
   m_Layer: 8
   m_Name: MonaChinaSentada
   m_TagString: Untagged
@@ -1144,6 +1145,19 @@ PlayableDirector:
   m_SceneBindings: []
   m_ExposedReferences:
     m_References: []
+--- !u!114 &4524184131870187475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4904830791236565978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a53f49c71a51744a469223c2b97f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iD: 1
 --- !u!1 &5097637956076220414
 GameObject:
   m_ObjectHideFlags: 0
