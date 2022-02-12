@@ -14,6 +14,7 @@ public class StudentInfo : MonoBehaviour
         if (collision.gameObject.GetComponent<BatHit>() != null)
         {
             ClassificationManager.instanceCM.npcGolpeado(iD);
+            this.transform.GetComponentInParent<Spawner>().time = true;
         }
     }
 
