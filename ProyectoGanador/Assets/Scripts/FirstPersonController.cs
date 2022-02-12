@@ -50,7 +50,10 @@ namespace StarterAssets
 		public float TopClamp = 90.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
+		[SerializeField]
+		GameObject bat;
 
+		private SphereCollider _batHitCol;
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
@@ -87,6 +90,7 @@ namespace StarterAssets
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 			_playerInput = GetComponent<PlayerInput>();
+			_batHitCol = bat.GetComponent<SphereCollider>();
 
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
@@ -98,6 +102,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			Attack();
 		}
 
 		private void LateUpdate()
@@ -185,6 +190,7 @@ namespace StarterAssets
 		{
 			if (Grounded)
 			{
+				_input.jump = false;
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
@@ -235,6 +241,19 @@ namespace StarterAssets
 			if (lfAngle > 360f) lfAngle -= 360f;
 			return Mathf.Clamp(lfAngle, lfMin, lfMax);
 		}
+
+		private void Attack()
+        {
+            if (_input.attack)
+            {
+				_input.attack = false;
+				_batHitCol.enabled = true;
+			}
+            else if (_batHitCol.enabled)
+			{
+				//_batHitCol.enabled = false;
+			}
+        }
 
 		private void OnDrawGizmosSelected()
 		{
