@@ -51,19 +51,19 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: bate1
-    clip: {fileID: 8300000, guid: 0b1f80f62cbc73843907d53bc0b482f1, type: 3}
+    clip: {fileID: 8300000, guid: 43b6293e3e919ba47b55b476326fd8ce, type: 3}
     mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
     loop: 0
     source: {fileID: 0}
   - name: bate2
-    clip: {fileID: 8300000, guid: 44ed2c13bb841614bb742c17f0ba78b6, type: 3}
+    clip: {fileID: 8300000, guid: 88af3e912a7b64443be6c6c30e758599, type: 3}
     mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
     loop: 0
     source: {fileID: 0}
   - name: bate3
-    clip: {fileID: 8300000, guid: 9c0ef43da29bad24b923bf0aecb47ffc, type: 3}
+    clip: {fileID: 8300000, guid: 3806da1789906b94aa64c8b09125f8bf, type: 3}
     mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
     loop: 0
@@ -87,19 +87,19 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: "golpe ni\xF1o1"
-    clip: {fileID: 8300000, guid: 206a4383f2c60df438e3c0accdc19be8, type: 3}
+    clip: {fileID: 8300000, guid: e9c45cd60ed0c9c42a4a8ebcd3e54a10, type: 3}
     mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
     loop: 0
     source: {fileID: 0}
   - name: "golpe ni\xF1o2"
-    clip: {fileID: 8300000, guid: aaa74f23f22651a4f8d5e3b098c3b915, type: 3}
+    clip: {fileID: 8300000, guid: 5c2993c3ebe7c0c46a4b0f7459084980, type: 3}
     mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
     loop: 0
     source: {fileID: 0}
   - name: "golpe ni\xF1o3"
-    clip: {fileID: 8300000, guid: c61efa0ae1cc4664faffdc8011addd00, type: 3}
+    clip: {fileID: 8300000, guid: 213e40585493df341829669be2a071a2, type: 3}
     mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
     loop: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2dbeac07f91a2a64f9af55a958739f54, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: subir puesto
     clip: {fileID: 8300000, guid: e8d19fad1f4cbc545b7ecec952c1bcad, type: 3}
@@ -168,23 +168,35 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 99cadeb33cea4f347946916acde6c3dd, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: CoroSandokaniko
     clip: {fileID: 8300000, guid: 54e86e1203bcf5142ba8f404d42ce687, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: EuroBeat
     clip: {fileID: 8300000, guid: b05cb3dbc01277748a725617cbef2bee, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Perder
     clip: {fileID: 8300000, guid: 8fd18b7674b4360469bfe1a2e48e0b74, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: golpe obj1
+    clip: {fileID: 8300000, guid: fc7301329b6e30f42b70604486900255, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: golpe obj2
+    clip: {fileID: 8300000, guid: 5d6e8667ce8e59c4f8033a59bf86a4e6, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
     volume: 1
     loop: 0
     source: {fileID: 0}

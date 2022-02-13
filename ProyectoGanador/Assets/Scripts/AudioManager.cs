@@ -11,7 +11,8 @@ public class AudioManager : MonoBehaviour
     AudioMixerGroup sfx;
 
     public enum ESounds { bajarPuesto, bate1, bate2, bate3, eoweo, eructo, escribiendo, golpeNiño1, golpeNiño2, golpeNiño3, 
-                          golpe, pasos1, pasos2, pasos3, pasos4, pasos5, pasos6, pop, tintontin1, subirPuesto, Apedra, CoroSandokaniko, EuroBeat, Perder}; // Enum usado para acceder al array sounds
+                          golpe, pasos1, pasos2, pasos3, pasos4, pasos5, pasos6, pop, tintontin1, subirPuesto, Apedra, CoroSandokaniko, 
+                          EuroBeat, Perder, GolpeObj1, GolpeObj2}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {

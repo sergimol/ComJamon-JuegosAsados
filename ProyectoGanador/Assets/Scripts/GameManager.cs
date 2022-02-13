@@ -42,9 +42,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Random.InitState((int)DateTime.Now.Ticks);
-        InicializarPeople();
-        initializeWalkingPeople();
-        ClassificationManager.instanceCM.startCM();
     }
 
     // Update is called once per frame
@@ -53,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void InicializarPeople()
+    public void InicializarPeople()
     {
         children = new List<Transform>();
 
@@ -85,7 +82,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void initializeWalkingPeople()
+    public void initializeWalkingPeople()
     {
         //ASUMIMOS QUE EL NÚMERO DE SPOTS ES MÚLTIPLO DE 4 
         GameObject spotPoints = GameObject.Find("Spots");
@@ -154,10 +151,15 @@ public class GameManager : MonoBehaviour
     public Transform[] getWalkingPoints() 
     {
         //Devuelve los 4 spots correspondientes
-        Transform[] set = new Transform[4];
-        Array.Copy(walkingSpawnPoints, numOfWalkingPeople*4, set, 0, 4);
-            
-        return set; 
+        if (walkingSpawnPoints != null)
+        {
+            Transform[] set = new Transform[4];
+            Array.Copy(walkingSpawnPoints, numOfWalkingPeople * 4, set, 0, 4);
+
+            return set;
+        }
+        
+        return null;
     }
 
     public void MainSliderState(float volume)

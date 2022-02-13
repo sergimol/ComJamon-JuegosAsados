@@ -56,7 +56,7 @@ public class ClassificationManager : MonoBehaviour
     {
         if (win)
             return;
-
+        AudioManager.instance.Play((AudioManager.ESounds)Random.Range(7, 10));
         people[posJugador].setUpper(false);
 
         if (iD == people[posJugador].getID())
@@ -131,9 +131,9 @@ public class ClassificationManager : MonoBehaviour
                 line = TV.transform.GetChild(0).GetChild(2).GetChild(j);
                 line.GetChild(1).GetComponent<Image>().color = Color.green;
                 line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j + 1).ToString();
-                line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
-                line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab()+1).ToString();
-                line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + j].getDescription();
+                //line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
+                //line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab()+1).ToString();
+                //line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + j].getDescription();
             }
         }
     }
