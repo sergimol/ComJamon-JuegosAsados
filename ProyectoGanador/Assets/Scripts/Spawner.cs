@@ -7,6 +7,8 @@ public class Spawner : MonoBehaviour
     private GameObject person;
     Vector3 pos;
     Quaternion rot;
+    [SerializeField]
+    bool rotar = false;
     // Start is called before the first frame update
   
 
@@ -21,6 +23,7 @@ public class Spawner : MonoBehaviour
         person = t;
         pos = t.transform.position;
         rot = t.transform.rotation;
+        if (rotar) rot.eulerAngles += new Vector3(0, 180, 0);
         createChild();
     }
 
