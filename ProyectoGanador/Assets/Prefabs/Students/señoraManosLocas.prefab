@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 1092068906913631010}
   - component: {fileID: 1092068906913631009}
   - component: {fileID: 1092068906913631008}
+  - component: {fileID: 7490484435508498736}
   m_Layer: 8
   m_Name: "se\xF1oraManosLocas"
   m_TagString: Untagged
@@ -191,6 +192,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 1
+--- !u!114 &7490484435508498736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281095864316905782}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &763627598377278535
 GameObject:
   m_ObjectHideFlags: 0

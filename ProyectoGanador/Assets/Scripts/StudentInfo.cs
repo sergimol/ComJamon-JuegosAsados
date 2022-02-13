@@ -9,27 +9,24 @@ public class StudentInfo : MonoBehaviour
     int iD;
     bool upper = false;
 
-    int lab;
+    int lab = 0;
     Animator anim;
     SphereCollider col;
 
     private void Start()
     {
-        lab = 0;
         anim = this.gameObject.GetComponent<Animator>();
 
         col = this.gameObject.GetComponent<SphereCollider>();
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Puto tonto");
         if (collision.gameObject.GetComponent<BatHit>() != null)
         {
             anim.enabled = false;
             col.enabled = false;
 
-
-            //ClassificationManager.instanceCM.npcGolpeado(iD);
+            ClassificationManager.instanceCM.npcGolpeado(iD);
         }
     }
 

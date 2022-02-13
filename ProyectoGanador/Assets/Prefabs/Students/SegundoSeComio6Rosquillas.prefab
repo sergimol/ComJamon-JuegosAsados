@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 907014319552759354}
   - component: {fileID: 907014319552759348}
   - component: {fileID: 907014319552759349}
+  - component: {fileID: 593952338572742978}
   m_Layer: 8
   m_Name: SegundoSeComio6Rosquillas
   m_TagString: Untagged
@@ -100,6 +101,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 0
+--- !u!114 &593952338572742978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24547036102638439}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &48854845616408095
 GameObject:
   m_ObjectHideFlags: 0

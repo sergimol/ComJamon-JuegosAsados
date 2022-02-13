@@ -2481,6 +2481,7 @@ GameObject:
   - component: {fileID: 9109671484683803977}
   - component: {fileID: 9109671484683803982}
   - component: {fileID: 9109671484683803976}
+  - component: {fileID: 2542354621869389484}
   m_Layer: 8
   m_Name: BachataEnOklahoma
   m_TagString: Untagged
@@ -2565,6 +2566,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 0
+--- !u!114 &2542354621869389484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8263370992560001784}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
+  moveSpots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8279671415140504837
 GameObject:
   m_ObjectHideFlags: 0

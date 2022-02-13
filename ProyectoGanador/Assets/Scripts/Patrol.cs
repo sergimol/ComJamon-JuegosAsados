@@ -9,20 +9,27 @@ public class Patrol : MonoBehaviour
     float waitTime;
     public float startWaitTime;
 
-    public Transform[] moveSpots;
+    Transform[] moveSpots;
     private int randomSpot;
 
     float tiempoGiroSuave = 0.1f;
     float velocidadGiroSuave;
-
+    //Jodete danlles
     Rigidbody rigid;
+
+    Transform trans;
+    private void Awake()
+    {
+        moveSpots = GameManager.instance.getWalkingPoints();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
-        rigid = GetComponent<Rigidbody>();
+        rigid = GetComponent<Rigidbody>();  
+        trans = GetComponent<Transform>();  
     }
 
     // Update is called once per frame
@@ -55,6 +62,7 @@ public class Patrol : MonoBehaviour
         else{
             //La direccion será el spot actual hacia el que vamos
             Vector3 dir = moveSpots[randomSpot].position - transform.position;
+
             //No necesitamos movimiento en y
             dir.y = 0;
             dir.Normalize();

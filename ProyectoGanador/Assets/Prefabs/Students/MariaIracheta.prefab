@@ -2668,6 +2668,7 @@ GameObject:
   - component: {fileID: 9098948638211523431}
   - component: {fileID: 9098948638211523430}
   - component: {fileID: 9098948638211523424}
+  - component: {fileID: 5170315373273669510}
   m_Layer: 8
   m_Name: MariaIracheta
   m_TagString: Untagged
@@ -2752,6 +2753,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 1
+--- !u!114 &5170315373273669510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251892240350849433}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &8285514667516615575
 GameObject:
   m_ObjectHideFlags: 0

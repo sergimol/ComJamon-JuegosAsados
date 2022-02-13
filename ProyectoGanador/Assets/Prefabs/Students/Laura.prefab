@@ -1943,6 +1943,7 @@ GameObject:
   - component: {fileID: 5131449785085282328}
   - component: {fileID: 5131449785085282329}
   - component: {fileID: 5131449785085282335}
+  - component: {fileID: 4880036876427153889}
   m_Layer: 8
   m_Name: Laura
   m_TagString: Untagged
@@ -2027,6 +2028,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 1
+--- !u!114 &4880036876427153889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474120630679358821}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &5500572765812445527
 GameObject:
   m_ObjectHideFlags: 0

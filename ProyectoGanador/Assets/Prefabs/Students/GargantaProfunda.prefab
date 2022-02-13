@@ -3197,6 +3197,7 @@ GameObject:
   - component: {fileID: 7505522621837729930}
   - component: {fileID: 7505522621837729934}
   - component: {fileID: 7505522621837729929}
+  - component: {fileID: 1754132474171370958}
   m_Layer: 8
   m_Name: GargantaProfunda
   m_TagString: Untagged
@@ -3288,6 +3289,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 0
+--- !u!114 &1754132474171370958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7271502359090834991}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &7369744926670797323
 GameObject:
   m_ObjectHideFlags: 0
