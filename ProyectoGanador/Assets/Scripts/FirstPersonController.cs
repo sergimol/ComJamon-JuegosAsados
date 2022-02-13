@@ -75,10 +75,12 @@ namespace StarterAssets
 
         //Timer
         private float startTimer;
+        private float stepTimer = 0.0f;
 
         private const float _threshold = 0.01f;
 
         private bool IsCurrentDeviceMouse => _playerInput.currentControlScheme == "KeyboardMouse";
+
 
         private void Awake()
         {
@@ -186,6 +188,24 @@ namespace StarterAssets
             {
                 // move
                 inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+                if (stepTimer <= 0)
+                {
+                    AudioManager.instance.Play((AudioManager.ESounds)Random.Range(11, 17));
+                    stepTimer = 0.35f;
+                }
+                else
+                    stepTimer -= Time.deltaTime;
+                
+                //bool nextStep = true;
+                //int i = 11;
+                //while(nextStep && i  <= 16)
+                //{
+                //    nextStep = !AudioManager.instance.IsPlaying((AudioManager.ESounds)i);
+                //    i++;
+                //}
+
+                //if (nextStep)
+                //    AudioManager.instance.Play((AudioManager.ESounds)Random.Range(11, 17));
             }
 
             // move the player
