@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         Random.InitState((int)DateTime.Now.Ticks);
         InicializarPeople();
-        //initializeWalkingPeople();
+        initializeWalkingPeople();
         ClassificationManager.instanceCM.startCM();
     }
 
