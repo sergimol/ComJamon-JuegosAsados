@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Playground.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
   - enabled: 1
+    path: Assets/Scenes/PruebaPost/Sandokan 1.unity
+    guid: 775ce4a7aa3291d4ba70f35542cf40dc
+  - enabled: 1
     path: Assets/Scenes/Timer.unity
     guid: 5997c0d6f154e2746af4f6e2ef8b28d5
   - enabled: 0

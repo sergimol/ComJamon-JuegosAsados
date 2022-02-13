@@ -17,9 +17,9 @@ public class GameManager : MonoBehaviour
     int peopleToCreate, labNum;
     [SerializeField]
     List<GameObject> prefabs;
-    public float mainVolSlider = 0.2f,
-                 SFXVolSlider = 0.2f,
-                 musicVolSlider = 0.2f;
+    public float mainVolSlider = 0.5f,
+                 SFXVolSlider = 0.5f,
+                 musicVolSlider = 0.5f;
     public bool gameIsPaused, needToPause, needToResume;
 
     private List<Transform> children;
