@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     private GameObject person;
-    float t = 0;
+    Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,7 @@ public class Spawner : MonoBehaviour
     public void setPrefab(Transform t)
     {
         person = t.gameObject;
+        pos = t.position;
         createChild();
     }
 
@@ -37,6 +38,6 @@ public class Spawner : MonoBehaviour
             this.transform.GetChild(5).gameObject.GetComponent<SphereCollider>().enabled = true;
         }
         else
-            Instantiate(person, this.transform.position, this.transform.rotation, this.transform);
+            Instantiate(person, pos + this.transform.position, this.transform.rotation, this.transform);
     }
 }
