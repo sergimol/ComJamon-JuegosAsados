@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2212074761226992195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8850104992319883191}
+  - component: {fileID: 5506760621406884599}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8850104992319883191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2212074761226992195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5506760621406884599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2212074761226992195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a4be48551bc2747850b3f8c37e4ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: bajar puesto
+    clip: {fileID: 8300000, guid: 39d1cb2681144f74089e6e5ea5988eb9, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bate1
+    clip: {fileID: 8300000, guid: 0b1f80f62cbc73843907d53bc0b482f1, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bate2
+    clip: {fileID: 8300000, guid: 44ed2c13bb841614bb742c17f0ba78b6, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bate3
+    clip: {fileID: 8300000, guid: 9c0ef43da29bad24b923bf0aecb47ffc, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eoweo
+    clip: {fileID: 8300000, guid: a076d4aeb903c7649ba125a7680e2fee, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eructo
+    clip: {fileID: 8300000, guid: 4f1aafd35d81f604bb2603aa26630668, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: escribiendo
+    clip: {fileID: 8300000, guid: ad9af7e777e79c041a94c699d78e5f53, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "golpe ni\xF1o1"
+    clip: {fileID: 8300000, guid: 206a4383f2c60df438e3c0accdc19be8, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "golpe ni\xF1o2"
+    clip: {fileID: 8300000, guid: aaa74f23f22651a4f8d5e3b098c3b915, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: "golpe ni\xF1o3"
+    clip: {fileID: 8300000, guid: c61efa0ae1cc4664faffdc8011addd00, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: golpe
+    clip: {fileID: 8300000, guid: 87fcad29c0de88c4e8276de9c72dc5da, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pasos1
+    clip: {fileID: 8300000, guid: 591366afa3a09fc4d83e9dbeeee629f5, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pasos2
+    clip: {fileID: 8300000, guid: 57d6d47a50c19ce4bb6f9d991d558f2c, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pasos3
+    clip: {fileID: 8300000, guid: db404df9b12eeb0438b5070b24fb8102, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pasos4
+    clip: {fileID: 8300000, guid: 738ea430af8b59448b1674b19c91a194, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pasos5
+    clip: {fileID: 8300000, guid: 2c0a23633afa3eb4da29a1df869a8714, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pasos6
+    clip: {fileID: 8300000, guid: b76e6474d0c18ac43a4e7618be6d580b, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pop
+    clip: {fileID: 8300000, guid: 2158553cd759df24aa77445ac75fdc6e, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: tintontin1.1
+    clip: {fileID: 8300000, guid: 2dbeac07f91a2a64f9af55a958739f54, type: 3}
+    mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: subir puesto
+    clip: {fileID: 8300000, guid: e8d19fad1f4cbc545b7ecec952c1bcad, type: 3}
+    mixer: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  sfx: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}

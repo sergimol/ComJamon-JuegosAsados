@@ -10,9 +10,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     AudioMixerGroup sfx;
 
-    public enum ESounds { Swing, Menu, MatonShot, Bloqueo1, Bloqueo2, Bloqueo3, FlasherRay, Level1, Hit, 
-                        Level2, Boss, Level1Low, Level2Low, RalentTime, RalentExp, RompePared, TurretShot,
-                        Bastonazo, TurretWalk, RalenTurretDeath, DronExp, PrestShot, CrystalBreak, Credits}; // Enum usado para acceder al array sounds
+    public enum ESounds { bajarPuesto, bate1, bate2, bate3, eoweo, eructo, escribiendo, golpeNiño1, golpeNiño2, golpeNiño3, 
+                          golpe, pasos1, pasos2, pasos3, pasos4, pasos5, pasos6, pop, tintontin1, subirPuesto}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {
