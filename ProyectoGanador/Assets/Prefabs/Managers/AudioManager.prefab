@@ -164,4 +164,28 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Apedra
+    clip: {fileID: 8300000, guid: 99cadeb33cea4f347946916acde6c3dd, type: 3}
+    mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: CoroSandokaniko
+    clip: {fileID: 8300000, guid: 54e86e1203bcf5142ba8f404d42ce687, type: 3}
+    mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EuroBeat
+    clip: {fileID: 8300000, guid: b05cb3dbc01277748a725617cbef2bee, type: 3}
+    mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Perder
+    clip: {fileID: 8300000, guid: 8fd18b7674b4360469bfe1a2e48e0b74, type: 3}
+    mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
   sfx: {fileID: -9092036313721312173, guid: 41c72716e56af5d49942631c76568f9c, type: 2}

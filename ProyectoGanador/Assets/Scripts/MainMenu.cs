@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
         loadingText.SetActive(true);
         mainUI.SetActive(false);
         Cursor.visible = false;
+        AudioManager.instance.Play(AudioManager.ESounds.tintontin1);
         SceneManager.LoadScene(1);
     }
 

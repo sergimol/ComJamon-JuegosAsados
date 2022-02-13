@@ -144,6 +144,17 @@ public class ClassificationManager : MonoBehaviour
         {
             posJugador--;
             AudioManager.instance.Play(AudioManager.ESounds.subirPuesto);
+
+            if(posJugador == 10)
+            {
+                AudioManager.instance.StopAllMusic();
+                AudioManager.instance.Play(AudioManager.ESounds.EuroBeat);
+            }
+            else if(posJugador == 5)
+            {
+                AudioManager.instance.StopAllMusic();
+                AudioManager.instance.Play(AudioManager.ESounds.Apedra);
+            }
         }
     }
 
