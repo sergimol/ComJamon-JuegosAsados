@@ -90,6 +90,7 @@ namespace StarterAssets
                 if(endTime < 0)
                 {
                     SceneManager.LoadScene("MainMenu");
+                    Cursor.visible = true;
                 }
             }
         }
