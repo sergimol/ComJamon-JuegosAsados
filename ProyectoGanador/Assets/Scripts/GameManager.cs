@@ -42,9 +42,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Random.InitState((int)DateTime.Now.Ticks);
-        InicializarPeople();
-        initializeWalkingPeople();
-        ClassificationManager.instanceCM.startCM();
     }
 
     // Update is called once per frame
@@ -53,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void InicializarPeople()
+    public void InicializarPeople()
     {
         children = new List<Transform>();
 
@@ -85,7 +82,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void initializeWalkingPeople()
+    public void initializeWalkingPeople()
     {
         //ASUMIMOS QUE EL NÚMERO DE SPOTS ES MÚLTIPLO DE 4 
         GameObject spotPoints = GameObject.Find("Spots");
