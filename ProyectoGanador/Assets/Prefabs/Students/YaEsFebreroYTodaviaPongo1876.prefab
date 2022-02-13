@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Vaqueros y camisa blanca
-  iD: 0
+  iD: 23
 --- !u!114 &2618809711677280731
 MonoBehaviour:
   m_ObjectHideFlags: 0

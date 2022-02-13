@@ -102,9 +102,9 @@ public class ClassificationManager : MonoBehaviour
             auxJ++;
             line.GetChild(1).GetComponent<Image>().color = Color.green;
             line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + auxJ).ToString();
-            line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + auxJ].getID().ToString();
-            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + auxJ].getLab()+1).ToString();
-            line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + auxJ].getDescription();
+            line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID 25";
+            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab 1";
+            line.GetChild(5).GetComponent<TextMeshProUGUI>().text = "Soy yo";
             ini = 0;
             posJugador = 0;
         }
@@ -119,7 +119,11 @@ public class ClassificationManager : MonoBehaviour
                 j--;
                 misMuertos = true;
             }
-            line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
+            if (people[ini + j].getID() < 10)
+                line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID 0" + people[ini + j].getID().ToString();
+            else
+                line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
+
             line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab()+1).ToString();
             line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + j].getDescription();
             //Debug.Log("Lab " + people[ini + j].getLab() + " " + ini + " " + j);
@@ -131,9 +135,9 @@ public class ClassificationManager : MonoBehaviour
                 line = TV.transform.GetChild(0).GetChild(2).GetChild(j);
                 line.GetChild(1).GetComponent<Image>().color = Color.green;
                 line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j + 1).ToString();
-                //line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
-                //line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab()+1).ToString();
-                //line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + j].getDescription();
+                line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID 25";
+                line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab 1";
+                line.GetChild(5).GetComponent<TextMeshProUGUI>().text = "Soy yo";
             }
         }
     }

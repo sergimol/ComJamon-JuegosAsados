@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Se durmio encima del lapiz
-  iD: 0
+  iD: 6
 --- !u!114 &4995647471010244602
 MonoBehaviour:
   m_ObjectHideFlags: 0
