@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     int peopleToCreate, labNum;
     [SerializeField]
     List<Transform> prefabs;
+    public float mainVolSlider = 0.2f,
+                 SFXVolSlider = 0.2f,
+                 musicVolSlider = 0.2f;
 
     private List<Transform> children;
     void Awake()
@@ -111,5 +114,18 @@ public class GameManager : MonoBehaviour
     public List<Transform> getSpawnList()
     {
         return children;
+    }
+
+    public void MainSliderState(float volume)
+    {
+        mainVolSlider = volume;
+    }
+    public void MusicSliderState(float volume)
+    {
+        musicVolSlider = volume;
+    }
+    public void SFXSliderState(float volume)
+    {
+        SFXVolSlider = volume;
     }
 }
