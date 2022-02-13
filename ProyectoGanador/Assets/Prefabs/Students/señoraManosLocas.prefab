@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a53f49c71a51744a469223c2b97f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Sales muy fresca
+  description: Vas muy fresca
   iD: 20
 --- !u!114 &7490484435508498736
 MonoBehaviour:
@@ -314,7 +314,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.014939667, y: 0.003468882, z: -0.0032348894}
+  m_ConnectedAnchor: {x: 0.014939667, y: 0.003468882, z: -0.0032348884}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -702,7 +702,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.009195924, y: -0.003916619, z: -0.00042971867}
+  m_ConnectedAnchor: {x: -0.009195924, y: -0.003916619, z: -0.0004297175}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -1688,7 +1688,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00023322913, y: 0.024990601, z: -0.0016916948}
+  m_ConnectedAnchor: {x: -0.00023322913, y: 0.024990601, z: -0.0016916953}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
