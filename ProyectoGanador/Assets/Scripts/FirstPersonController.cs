@@ -108,6 +108,7 @@ namespace StarterAssets
             GroundedCheck();
             Move();
             Attack();
+            //Pause();
         }
 
         private void LateUpdate()
@@ -253,7 +254,9 @@ namespace StarterAssets
             {
                 _input.attack = false;
                 _batHitCol.enabled = true;
-                _batAnim.SetInteger("Random", Random.Range(1, 4));
+                int r = Random.Range(1, 4);
+                AudioManager.instance.Play((AudioManager.ESounds)r);
+                _batAnim.SetInteger("Random", r);
                 startTimer = 0.25f;
             }
             else if (_batAnim.GetInteger("Random") != 0)
@@ -264,6 +267,17 @@ namespace StarterAssets
                     _batHitCol.enabled = false;
                     _batAnim.SetInteger("Random", 0);
                 }
+            }
+        }
+
+        private void Pause()
+        {
+            if (_input.pause)
+            {
+                _input.pause = false;
+                // Es un poco raro lo sé pero no queria hacer 1409594 if elses
+                GameManager.instance.needToPause = !GameManager.instance.gameIsPaused;
+                GameManager.instance.needToResume = GameManager.instance.gameIsPaused;
             }
         }
 
