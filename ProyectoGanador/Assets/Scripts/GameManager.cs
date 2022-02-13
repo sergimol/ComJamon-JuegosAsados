@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ResetLabo(int lab)
+    public void ResetLabo(int lab)
     {
         if (lab > labNum)
         {

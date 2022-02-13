@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a53f49c71a51744a469223c2b97f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: Matame por favor
   iD: 0
 --- !u!114 &6622939130466338495
 MonoBehaviour:

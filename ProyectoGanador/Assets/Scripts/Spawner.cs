@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
         if (person == null) return;
         if (this.transform.childCount == 6)     //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
         {
-            this.transform.GetChild(5).position = pos;
+            this.transform.GetChild(5).position = this.GetComponentInParent<Transform>().position;
             this.transform.GetChild(5).rotation = rot;
             this.transform.GetChild(5).gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             this.transform.GetChild(5).gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
@@ -38,7 +38,6 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            Debug.Log(pos);
             Instantiate(person, this.transform, false);
         }
     }
