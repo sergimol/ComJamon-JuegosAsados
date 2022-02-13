@@ -2670,6 +2670,7 @@ GameObject:
   - component: {fileID: 7317288975756088932}
   - component: {fileID: 7317288975756088933}
   - component: {fileID: 7317288975756088931}
+  - component: {fileID: 6562888133223338540}
   m_Layer: 8
   m_Name: MiTioQueHueleAMayonesa
   m_TagString: Untagged
@@ -2754,6 +2755,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 1
+--- !u!114 &6562888133223338540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7587811519271590585}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &7676731991155096034
 GameObject:
   m_ObjectHideFlags: 0

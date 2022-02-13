@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 2355629871202523060}
   - component: {fileID: 2355629871202523061}
   - component: {fileID: 2355629871202523063}
+  - component: {fileID: 2618809711677280731}
   m_Layer: 8
   m_Name: YaEsFebreroYTodaviaPongo1876
   m_TagString: Untagged
@@ -829,6 +830,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 0
+--- !u!114 &2618809711677280731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202491662095772394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &3447924889013898505
 GameObject:
   m_ObjectHideFlags: 0

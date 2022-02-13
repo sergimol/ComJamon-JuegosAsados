@@ -3379,6 +3379,7 @@ GameObject:
   - component: {fileID: 7097909896353789589}
   - component: {fileID: 7097909896353789588}
   - component: {fileID: 7097909896353789595}
+  - component: {fileID: 4668613719836937645}
   m_Layer: 8
   m_Name: UnMenRuBioSinMandibula
   m_TagString: Untagged
@@ -3469,6 +3470,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 1
+--- !u!114 &4668613719836937645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7944840812405240452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &8076544257823799352
 GameObject:
   m_ObjectHideFlags: 0

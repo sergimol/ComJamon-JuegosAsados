@@ -1862,6 +1862,7 @@ GameObject:
   - component: {fileID: 6215374983265871139}
   - component: {fileID: 6215374983265871140}
   - component: {fileID: 6215374983265871138}
+  - component: {fileID: 6070839244423445402}
   m_Layer: 8
   m_Name: LlegasATuCasaBorrachoCon14Anios
   m_TagString: Untagged
@@ -1946,6 +1947,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 1
+--- !u!114 &6070839244423445402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521242273915867874}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881722e9202c2914b88857eaee772628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  startWaitTime: 1
 --- !u!1 &6956969884884368120
 GameObject:
   m_ObjectHideFlags: 0
