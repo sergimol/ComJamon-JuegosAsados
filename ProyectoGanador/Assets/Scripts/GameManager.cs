@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,
                  musicVolSlider = 0.2f;
+    public bool gameIsPaused, needToPause, needToResume;
 
     private List<Transform> children;
     void Awake()
