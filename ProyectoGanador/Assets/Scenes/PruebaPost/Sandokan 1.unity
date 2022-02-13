@@ -4792,7 +4792,7 @@ PrefabInstance:
       objectReference: {fileID: 1323433450}
     - target: {fileID: 5102240867739731950, guid: fadf8f63ffa4ceb4b836b7906235bc78, type: 3}
       propertyPath: startTime
-      value: 300
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 5102240868001980241, guid: fadf8f63ffa4ceb4b836b7906235bc78, type: 3}
       propertyPath: m_FontData.m_Font

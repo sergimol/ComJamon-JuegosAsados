@@ -1101,7 +1101,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.03293953, y: 0.6867968, z: 0.11609245}
+  m_ConnectedAnchor: {x: -0.03293953, y: 0.6867968, z: 0.11609243}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1424,7 +1424,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.18436335, y: -0.1441672, z: 0.0016052574}
+  m_ConnectedAnchor: {x: 0.18436335, y: -0.1441672, z: 0.001605235}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -2230,7 +2230,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.18528172, y: -0.13833408, z: 0.026623541}
+  m_ConnectedAnchor: {x: -0.18528172, y: -0.13833408, z: 0.026623528}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
@@ -2554,7 +2554,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.54670405, y: 0.00932081, z: 0.07024176}
+  m_ConnectedAnchor: {x: -0.54670405, y: 0.009320855, z: 0.07024176}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3469,7 +3469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a53f49c71a51744a469223c2b97f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Kurt Cobain
+  description: Juan
   iD: 21
 --- !u!114 &4668613719836937645
 MonoBehaviour:

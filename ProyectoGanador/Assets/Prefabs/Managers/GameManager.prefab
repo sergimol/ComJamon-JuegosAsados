@@ -43,3 +43,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f04e3b81df9a1134db4fde34a4023988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkingControllers:
+  - {fileID: 9100000, guid: 36079238e9af54945856ef03b233577a, type: 2}
+  - {fileID: 9100000, guid: dd8002a24384a2a458446b60f6612c63, type: 2}
+  - {fileID: 9100000, guid: caa9c33a23fdc1c43814da8ef93bcce1, type: 2}
+  spawner: {fileID: 0}
+  peopleToCreate: 15
+  labNum: 4
+  prefabs:
+  - {fileID: 8263370992560001784, guid: c44aed6e96bc7c24886d334fff3fce5c, type: 3}
+  - {fileID: 6064889553766499252, guid: 496557bf6c1d98044a8937386e2a2d95, type: 3}
+  - {fileID: 2662424867470864700, guid: 773577b0a723cc946ae0736929b96506, type: 3}
+  - {fileID: 7271502359090834991, guid: 10ff1b1871246244bbab66390b2d9029, type: 3}
+  - {fileID: 4616353161526977761, guid: 0ce0d25597aa1024fb8c22eba7d0acd4, type: 3}
+  - {fileID: 1802607512181590650, guid: 8c0acef381c54d644af2fb2bfc3936bb, type: 3}
+  - {fileID: 5474120630679358821, guid: 28fc7e6b4e562fd448db750bfaccfe2d, type: 3}
+  - {fileID: 6521242273915867874, guid: c7c58ec0b105d0b459f2b93ccaa6cba9, type: 3}
+  - {fileID: 8736722655063561763, guid: b50a671e1f6ad394e8f237ab697213e1, type: 3}
+  - {fileID: 8251892240350849433, guid: 36852b0c062618f44b0ed8e1a185309d, type: 3}
+  - {fileID: 2210023555688187836, guid: 4a0eae3f4ec661949afc8aa76c00d697, type: 3}
+  - {fileID: 6658380310281616060, guid: e8f1a714eb4c7674d88c5ec28cb18085, type: 3}
+  - {fileID: 6903828076507507014, guid: c7d22bd143008e045a92f9e634e005f8, type: 3}
+  - {fileID: 7587811519271590585, guid: cf712a8092d382147acca58ee042023b, type: 3}
+  - {fileID: 4932200603832897524, guid: 8a20f0243485672408391a1317fd47da, type: 3}
+  - {fileID: 7977096047675861025, guid: 2df4a7c252dff1243998e5268fedd12f, type: 3}
+  - {fileID: 1957718392893242738, guid: f9aab929710d89d48b8cc3902cb46d29, type: 3}
+  - {fileID: 24547036102638439, guid: 0a7ee35f902d9cb45ae7567335d5b77e, type: 3}
+  - {fileID: 8894502555916671106, guid: 00a4624997994a449ae5d1852d5efc38, type: 3}
+  - {fileID: 281095864316905782, guid: 49f79eb50825f0b4b8d66eab5dd03ed4, type: 3}
+  - {fileID: 7944840812405240452, guid: 21ff1596841fe7040a0f286db94f7049, type: 3}
+  - {fileID: 721339691736221079, guid: 7916b2623f8a9584191a402fb7d5ce89, type: 3}
+  - {fileID: 3202491662095772394, guid: 9f4606de1de5c2645a3ad65c1c2beb0c, type: 3}
+  - {fileID: 2130178894050019120, guid: 4652625af1d9a01429e9e8c620785fb4, type: 3}
+  mainVolSlider: 0.5
+  SFXVolSlider: 0.5
+  musicVolSlider: 0.5
+  gameIsPaused: 0
+  needToPause: 0
+  needToResume: 0
