@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     AudioMixerGroup sfx;
 
     public enum ESounds { bajarPuesto, bate1, bate2, bate3, eoweo, eructo, escribiendo, golpeNiño1, golpeNiño2, golpeNiño3, 
-                          golpe, pasos1, pasos2, pasos3, pasos4, pasos5, pasos6, pop, tintontin1, subirPuesto}; // Enum usado para acceder al array sounds
+                          golpe, pasos1, pasos2, pasos3, pasos4, pasos5, pasos6, pop, tintontin1, subirPuesto, Apedra, CoroSandokaniko, EuroBeat, Perder}; // Enum usado para acceder al array sounds
 
     private void Awake()
     {
@@ -68,6 +68,17 @@ public class AudioManager : MonoBehaviour
         {
             s = sounds[i];
             if (s.source.outputAudioMixerGroup == sfx) 
+                s.source.Stop();
+        }
+    }
+
+    public void StopAllMusic() // Para todos los efectos de sonido
+    {
+        Sound s;
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            s = sounds[i];
+            if (s.source.outputAudioMixerGroup != sfx)
                 s.source.Stop();
         }
     }
