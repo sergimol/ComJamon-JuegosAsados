@@ -84,7 +84,7 @@ public class ClassificationManager : MonoBehaviour
             {
                 up = true;
             }
-            if (posJugador + i > people.Count)
+            if (posJugador + i + 1 > people.Count)
             {
                 down = true;
             }
@@ -93,7 +93,7 @@ public class ClassificationManager : MonoBehaviour
         int ini = 0;
         if (!up && !down) ini = posJugador - 3;
         else if (up) ini = 0;
-        else if (down) ini = people.Count - 9;
+        else if (down) ini = people.Count - 8;
         int auxJ = 0;
         if (posJugador == -1)
         {
@@ -104,14 +104,14 @@ public class ClassificationManager : MonoBehaviour
             line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + auxJ).ToString();
             line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + auxJ].getID().ToString();
             line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + auxJ].getLab().ToString();
-            ini = 1;
+            ini = 0;
             posJugador = 0;
         }
         for (int j = auxJ; j < 9; j++)
         {
             Transform line = TV.transform.GetChild(0).GetChild(2).GetChild(j);
             line.GetChild(1).GetComponent<Image>().color = Color.cyan;
-            line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j).ToString();
+            line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j + 1).ToString();
             bool misMuertos = false;
             if (ini + j > posJugador)
             {
@@ -120,6 +120,7 @@ public class ClassificationManager : MonoBehaviour
             }
             line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
             line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + j].getLab().ToString();
+            Debug.Log("Lab " + people[ini + j].getLab() + " " + ini + " " + j);
             if (misMuertos) j++;
 
             if (ini + j == posJugador)
@@ -127,7 +128,7 @@ public class ClassificationManager : MonoBehaviour
                 j++;
                 line = TV.transform.GetChild(0).GetChild(2).GetChild(j);
                 line.GetChild(1).GetComponent<Image>().color = Color.green;
-                line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j).ToString();
+                line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j + 1).ToString();
                 line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
                 line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + j].getLab().ToString();
             }
