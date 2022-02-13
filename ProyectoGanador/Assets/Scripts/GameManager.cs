@@ -69,9 +69,9 @@ public class GameManager : MonoBehaviour
         int comPorLab = spawner.childCount / labNum;
         for (int i = 0; i < spawner.childCount; i++)
         {
-            if (spawner.GetChild(i).transform.childCount > 0)        //CAMBIAR CUANDO PONGAMOS MÁS HIJOS
-            {
-                spawner.GetChild(i).GetChild(0).gameObject.GetComponent<StudentInfo>().SetLab(i / comPorLab);
+            if (spawner.GetChild(i).transform.childCount > 5)        //CAMBIAR CUANDO PONGAMOS MÁS HIJOS
+            {               
+                spawner.GetChild(i).GetChild(5).gameObject.GetComponent<StudentInfo>().SetLab(i / comPorLab);
             }
         }
     }

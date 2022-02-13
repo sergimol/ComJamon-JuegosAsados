@@ -25,6 +25,7 @@ public class ClassificationManager : MonoBehaviour
     // Start is called before the first frame update
     public void startCM()
     {
+        //Debug.Log(posJugador + " " + posIni);
         posJugador = posIni - 1;
         people = new List<StudentInfo>();
         man = GameManager.instance;
@@ -32,9 +33,9 @@ public class ClassificationManager : MonoBehaviour
 
         for (int i = 0; i < children.Count; i++)
         {
-            if (children[i].childCount == 1)        //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
+            if (children[i].childCount == 6)        //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
             {
-                people.Add(children[i].GetChild(0).gameObject.GetComponent<StudentInfo>());
+                people.Add(children[i].GetChild(5).gameObject.GetComponent<StudentInfo>());
             }
         }
 

@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
     public void createChild()
     {
         if (person == null) return;
-        if (this.transform.childCount == 1)     //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
+        if (this.transform.childCount == 6)     //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
         {
             this.transform.GetChild(0).position = this.transform.position;
             this.transform.GetChild(0).rotation = new Quaternion(0, 0, 0, 0);
