@@ -9,6 +9,10 @@ public class Timer : MonoBehaviour
 {
     [SerializeField]
     float startTime;
+    [SerializeField]
+    Transform tv;
+    [SerializeField]
+    GameObject secondCam;
 
     private Text timerText;
     // Start is called before the first frame update
@@ -38,7 +42,10 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("ScoreScene");
+            tv.position = Camera.main.transform.position + Camera.main.transform.forward * 4;
+            //tv.position = Vector3.Lerp();
+            tv.rotation = Camera.main.transform.rotation;
+            secondCam.gameObject.SetActive(true);
         }
     }
 }
