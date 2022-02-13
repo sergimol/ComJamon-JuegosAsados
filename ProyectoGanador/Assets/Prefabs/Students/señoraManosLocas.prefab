@@ -191,6 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a53f49c71a51744a469223c2b97f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  description: Sales muy fresca
   iD: 1
 --- !u!114 &7490484435508498736
 MonoBehaviour:

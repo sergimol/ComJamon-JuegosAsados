@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class StudentInfo : MonoBehaviour
 {
+    [SerializeField]
+    string description;
 
     [SerializeField]
     int iD;
@@ -53,4 +55,6 @@ public class StudentInfo : MonoBehaviour
     {
         lab = i;
     }
+
+    public string getDescription() { return description; }
 }
