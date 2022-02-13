@@ -16,7 +16,10 @@ public class ClassificationManager : MonoBehaviour
     [SerializeField]
     GameObject TV;
 
-    bool win = false;
+    [SerializeField]
+    Text scoreText;
+
+    public bool win = false;
 
     private void Awake()
     {
@@ -46,12 +49,6 @@ public class ClassificationManager : MonoBehaviour
         ActTV();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void npcGolpeado(int iD)
     {
         if (win)
@@ -67,7 +64,11 @@ public class ClassificationManager : MonoBehaviour
 
         if (posJugador != -1)
             people[posJugador].setUpper(true);
-        else win = true;
+        else
+        {
+            win = true;
+            scoreText.text = "Has Ganado";
+        }
 
         ActTV();
     }
@@ -149,12 +150,12 @@ public class ClassificationManager : MonoBehaviour
             posJugador--;
             AudioManager.instance.Play(AudioManager.ESounds.subirPuesto);
 
-            if(posJugador == 10)
+            if (posJugador == 10)
             {
                 AudioManager.instance.StopAllMusic();
                 AudioManager.instance.Play(AudioManager.ESounds.EuroBeat);
             }
-            else if(posJugador == 5)
+            else if (posJugador == 5)
             {
                 AudioManager.instance.StopAllMusic();
                 AudioManager.instance.Play(AudioManager.ESounds.Apedra);
@@ -165,7 +166,7 @@ public class ClassificationManager : MonoBehaviour
     private void bajarPuesto()
     {
         if (posJugador < people.Count - 1)
-        { 
+        {
             posJugador++;
             AudioManager.instance.Play(AudioManager.ESounds.bajarPuesto);
         }

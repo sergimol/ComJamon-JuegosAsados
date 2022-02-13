@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StudentInfo : MonoBehaviour
+    public class StudentInfo : MonoBehaviour
 {
     [SerializeField]
     string description;
@@ -35,7 +35,8 @@ public class StudentInfo : MonoBehaviour
 
             ClassificationManager.instanceCM.npcGolpeado(iD);
 
-            collision.gameObject.GetComponent<Patrol>().enabled = false;
+            if(collision.gameObject.GetComponent<Patrol>())
+                collision.gameObject.GetComponent<Patrol>().enabled = false;
         }
     }
 

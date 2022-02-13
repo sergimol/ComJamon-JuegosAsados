@@ -21,10 +21,14 @@ namespace StarterAssets
         [SerializeField]
         GameObject chara;
 
+        [SerializeField]
+        ClassificationManager clasMan;
+
         bool finished = true;
         Vector3 newPos;
         Vector3 newTextPos;
 
+        float endTime = 4;
         private Text timerText;
         // Start is called before the first frame update
         void Start()
@@ -35,6 +39,11 @@ namespace StarterAssets
         // Update is called once per frame
         void Update()
         {
+            if (clasMan.win)
+            {
+                startTime = 0;
+            }
+
             if (startTime > 0)
             {
                 //Si ha perdido
@@ -76,7 +85,18 @@ namespace StarterAssets
                 {
                     scText.position = Vector3.Lerp(scText.position, new Vector3(scText.position.x, newTextPos.y, scText.position.z), 0.025f);
                 }
+
+                endTime -= Time.deltaTime;
+                if(endTime < 0)
+                {
+                    SceneManager.LoadScene("MainMenu");
+                }
             }
+        }
+
+        public void setTimeZero()
+        {
+            startTime = 0.001f;
         }
     }
 }
