@@ -5,47 +5,78 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour
+namespace StarterAssets
 {
-    [SerializeField]
-    float startTime;
-    [SerializeField]
-    Transform tv;
-    [SerializeField]
-    GameObject secondCam;
-
-    private Text timerText;
-    // Start is called before the first frame update
-    void Start()
+    public class Timer : MonoBehaviour
     {
-        timerText = GetComponent<Text>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (startTime > 0)
+        [SerializeField]
+        float startTime;
+        [SerializeField]
+        Transform tv;
+        [SerializeField]
+        Transform scText;
+        [SerializeField]
+        GameObject secondCam;
+        [SerializeField]
+        GameObject chara;
+
+        bool finished = true;
+        Vector3 newPos;
+        Vector3 newTextPos;
+
+        private Text timerText;
+        // Start is called before the first frame update
+        void Start()
         {
-            //Si ha perdido
-            startTime -= Time.deltaTime;
-
-            int seconds = (int)Math.Truncate(startTime % 60);
-
-            string minutes = ((int)Math.Truncate(startTime / 60)).ToString();
-
-            string zero = "";
-
-            if (seconds < 10)
-                zero = "0";
-
-            timerText.text = minutes + ":" + zero + seconds.ToString();
+            timerText = GetComponent<Text>();
         }
-        else
+
+        // Update is called once per frame
+        void Update()
         {
-            tv.position = Camera.main.transform.position + Camera.main.transform.forward * 4;
-            //tv.position = Vector3.Lerp();
-            tv.rotation = Camera.main.transform.rotation;
-            secondCam.gameObject.SetActive(true);
+            if (startTime > 0)
+            {
+                //Si ha perdido
+                startTime -= Time.deltaTime;
+
+                int seconds = (int)Math.Truncate(startTime % 60);
+
+                string minutes = ((int)Math.Truncate(startTime / 60)).ToString();
+
+                string zero = "";
+
+                if (seconds < 10)
+                    zero = "0";
+
+                timerText.text = minutes + ":" + zero + seconds.ToString();
+            }
+            else if (finished)
+            {
+                newPos = Camera.main.transform.position + Camera.main.transform.forward * 4;
+                newPos.y += 10;
+
+                tv.position = newPos;
+
+                newPos.y -= 10;
+                newTextPos = scText.position;
+                newTextPos.y -= 150;
+
+                tv.rotation = Camera.main.transform.rotation;
+
+                secondCam.gameObject.SetActive(true);
+                //tv.gameObject.GetComponent<Animator>().enabled = true;
+                chara.GetComponent<FirstPersonController>().enabled = false;
+                finished = false;
+            }
+            else
+            {
+                tv.position = Vector3.Lerp(tv.position, newPos, 0.025f);
+                if (tv.position.y < newPos.y + 0.1f)
+                {
+                    scText.position = Vector3.Lerp(scText.position, new Vector3(scText.position.x, newTextPos.y, scText.position.z), 0.025f);
+                }
+            }
         }
     }
 }

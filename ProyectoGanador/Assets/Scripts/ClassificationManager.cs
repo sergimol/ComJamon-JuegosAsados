@@ -141,13 +141,19 @@ public class ClassificationManager : MonoBehaviour
     private void subirPuesto()
     {
         if (posJugador >= 0)
+        {
             posJugador--;
+            AudioManager.instance.Play(AudioManager.ESounds.subirPuesto);
+        }
     }
 
     private void bajarPuesto()
     {
         if (posJugador < people.Count - 1)
+        { 
             posJugador++;
+            AudioManager.instance.Play(AudioManager.ESounds.subirPuesto);
+        }
     }
 
     private void log()

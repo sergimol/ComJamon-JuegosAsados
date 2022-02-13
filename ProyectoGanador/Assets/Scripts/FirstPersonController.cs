@@ -108,7 +108,7 @@ namespace StarterAssets
             GroundedCheck();
             Move();
             Attack();
-            Pause();
+            //Pause();
         }
 
         private void LateUpdate()
@@ -254,7 +254,9 @@ namespace StarterAssets
             {
                 _input.attack = false;
                 _batHitCol.enabled = true;
-                _batAnim.SetInteger("Random", Random.Range(1, 4));
+                int r = Random.Range(1, 4);
+                AudioManager.instance.Play((AudioManager.ESounds)r);
+                _batAnim.SetInteger("Random", r);
                 startTimer = 0.25f;
             }
             else if (_batAnim.GetInteger("Random") != 0)

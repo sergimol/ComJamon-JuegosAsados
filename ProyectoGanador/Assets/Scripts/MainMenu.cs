@@ -6,15 +6,17 @@ using UnityEngine.EventSystems;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField]
-    GameObject optionsFirstButton = null, optionsUI = null, mainUI = null; // Referencian el menú de opciones y el botón seleccionado al abrirlo
+    GameObject optionsFirstButton = null, optionsUI = null, mainUI = null, loadingText = null; // Referencian el menú de opciones y el botón seleccionado al abrirlo
 
     private void Start() // Inicia la música del menú
     {
-        //AudioManager.instance.Play(AudioManager.ESounds.Menu);        
+        AudioManager.instance.Play(AudioManager.ESounds.tintontin1);
     }
 
     public void Play() // Para la música del menú y carga la primera escena
     {
+        loadingText.SetActive(true);
+        mainUI.SetActive(false);
         Cursor.visible = false;
         SceneManager.LoadScene(1);
     }
