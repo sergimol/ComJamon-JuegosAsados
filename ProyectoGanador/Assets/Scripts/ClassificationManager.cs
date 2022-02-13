@@ -120,7 +120,6 @@ public class ClassificationManager : MonoBehaviour
             }
             line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
             line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + j].getLab().ToString();
-            Debug.Log("Lab " + people[ini + j].getLab() + " " + ini + " " + j);
             if (misMuertos) j++;
 
             if (ini + j == posJugador)

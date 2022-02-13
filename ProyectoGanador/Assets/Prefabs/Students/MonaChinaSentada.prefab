@@ -511,7 +511,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.075570054, y: -0.048262734, z: 0.0030053603}
+  m_ConnectedAnchor: {x: 0.075570054, y: -0.04826273, z: 0.0030053547}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1067,7 +1067,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: -1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.122371465, y: 0.05579443, z: 0.01758093}
+  m_ConnectedAnchor: {x: -0.122371465, y: 0.05579443, z: 0.017580938}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -1527,7 +1527,6 @@ GameObject:
   - component: {fileID: 5238772138059346710}
   - component: {fileID: 5238772138059346707}
   - component: {fileID: 4515675221959912445}
-  - component: {fileID: 9161815216485685870}
   - component: {fileID: 6485013720042831704}
   m_Layer: 8
   m_Name: MonaChinaSentada
@@ -1614,18 +1613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iD: 1
---- !u!114 &9161815216485685870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4932200603832897524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 584b573906d70044c9b64a9c8534d126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6485013720042831704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,7 +2418,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.07557007, y: -0.04826273, z: 0.003005356}
+  m_ConnectedAnchor: {x: -0.07557007, y: -0.04826273, z: 0.0030053672}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3042,7 +3029,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000007450581, y: 0.18975192, z: -0.000000007450581}
+  m_ConnectedAnchor: {x: 0.000000007450581, y: 0.18975198, z: -0.000000037252903}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:

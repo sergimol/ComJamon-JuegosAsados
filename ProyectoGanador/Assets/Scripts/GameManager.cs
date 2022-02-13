@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     {
         Random.InitState((int)DateTime.Now.Ticks);
         InicializarPeople();
-        initializeWalkingPeople();
+        //initializeWalkingPeople();
         ClassificationManager.instanceCM.startCM();
     }
 
@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ResetLabo(int lab)
+    public void ResetLabo(int lab)
     {
         if (lab > labNum)
         {
