@@ -16,6 +16,8 @@ public class ClassificationManager : MonoBehaviour
     [SerializeField]
     GameObject TV;
 
+    bool win = false;
+
     private void Awake()
     {
         instanceCM = this;
@@ -51,6 +53,9 @@ public class ClassificationManager : MonoBehaviour
 
     public void npcGolpeado(int iD)
     {
+        if (win)
+            return;
+
         people[posJugador].setUpper(false);
 
         if (iD == people[posJugador].getID())
@@ -59,9 +64,11 @@ public class ClassificationManager : MonoBehaviour
         }
         else bajarPuesto();
 
-        people[posJugador].setUpper(true);
+        if (posJugador != -1)
+            people[posJugador].setUpper(true);
+        else win = true;
 
-
+        ActTV();
     }
 
     private void ActTV()
@@ -86,8 +93,20 @@ public class ClassificationManager : MonoBehaviour
         if (!up && !down) ini = posJugador - 3;
         else if (up) ini = 0;
         else if (down) ini = people.Count - 9;
-
-        for (int j = 0; j < 9; j++)
+        int auxJ = 0;
+        if (posJugador == -1)
+        {
+            Transform line = TV.transform.GetChild(0).GetChild(2).GetChild(auxJ);
+            line = TV.transform.GetChild(0).GetChild(2).GetChild(auxJ);
+            auxJ++;
+            line.GetChild(1).GetComponent<Image>().color = Color.green;
+            line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + auxJ).ToString();
+            line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + auxJ].getID().ToString();
+            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + auxJ].getLab().ToString();
+            ini = 1;
+            posJugador = 0;
+        }
+        for (int j = auxJ; j < 9; j++)
         {
             Transform line = TV.transform.GetChild(0).GetChild(2).GetChild(j);
             line.GetChild(1).GetComponent<Image>().color = Color.cyan;
