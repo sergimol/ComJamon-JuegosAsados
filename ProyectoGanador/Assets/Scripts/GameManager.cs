@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
                  musicVolSlider = 0.5f;
     public bool gameIsPaused, needToPause, needToResume;
 
+    int numOfWalkingPeople = 0;
+
     private List<Transform> children;
     void Awake()
     {
@@ -85,6 +87,7 @@ public class GameManager : MonoBehaviour
 
     void initializeWalkingPeople()
     {
+        //ASUMIMOS QUE EL NÚMERO DE SPOTS ES MÚLTIPLO DE 4 
         GameObject spotPoints = GameObject.Find("Spots");
 
         walkingSpawnPoints = new Transform[spotPoints.transform.childCount];
@@ -93,15 +96,19 @@ public class GameManager : MonoBehaviour
             walkingSpawnPoints[i] = spotPoints.transform.GetChild(i).transform;
         }
         
-        for(int i=0; i < walkingSpawnPoints.Length; i++)
+        for(int i=0; i < walkingSpawnPoints.Length/4; i++)
         {
             int student = Random.Range(0, prefabs.Count - 1);
 
-            Transform newStudent = Instantiate(prefabs[student].transform, walkingSpawnPoints[i].position, walkingSpawnPoints[i].rotation);
+            Transform newStudent = Instantiate(prefabs[student].transform, 
+                                               walkingSpawnPoints[i*4].position, 
+                                               walkingSpawnPoints[i*4].rotation);
 
             newStudent.gameObject.GetComponent<Patrol>().enabled = true;
 
             newStudent.gameObject.GetComponent<Animator>().runtimeAnimatorController = walkingControllers[Random.Range(0, walkingControllers.Length)];
+
+            numOfWalkingPeople++;
         }
     }
     public void Mezcla<T>(List<T> list)
@@ -144,7 +151,14 @@ public class GameManager : MonoBehaviour
         return children;
     }
 
-    public Transform[] getWalkingPoints() { return walkingSpawnPoints; }
+    public Transform[] getWalkingPoints() 
+    {
+        //Devuelve los 4 spots correspondientes
+        Transform[] set = new Transform[4];
+        Array.Copy(walkingSpawnPoints, numOfWalkingPeople*4, set, 0, 4);
+            
+        return set; 
+    }
 
     public void MainSliderState(float volume)
     {
