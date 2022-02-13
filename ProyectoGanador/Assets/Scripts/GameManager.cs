@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 
             newStudent.gameObject.GetComponent<Patrol>().enabled = true;
 
-            newStudent.gameObject.GetComponent<Animator>().runtimeAnimatorController = walkingControllers[Random.Range(0,walkingControllers.Length)];
+            newStudent.gameObject.GetComponent<Animator>().runtimeAnimatorController = walkingControllers[Random.Range(0, walkingControllers.Length)];
         }
     }
     public void Mezcla<T>(List<T> list)
