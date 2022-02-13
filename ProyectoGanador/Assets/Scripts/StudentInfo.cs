@@ -21,7 +21,6 @@ public class StudentInfo : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("Puto tonto");
         if (collision.gameObject.GetComponent<BatHit>() != null)
         {
             anim.enabled = false;

@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [SerializeField]
+    RuntimeAnimatorController[] walkingControllers;
+    [SerializeField]
+    Transform[] walkingSpawnPoints;
+    [SerializeField]
     Transform spawner;
     [SerializeField]
     int peopleToCreate, labNum;
@@ -34,7 +38,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Random.InitState((int)DateTime.Now.Ticks);
-        InicializarPeople();
+        //InicializarPeople();
+        initializeWalkingPeople();
         ClassificationManager.instanceCM.startCM();
     }
 
@@ -76,6 +81,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void initializeWalkingPeople()
+    {
+        for(int i=0; i < walkingSpawnPoints.Length; i++)
+        {
+            int student = Random.Range(0, prefabs.Count - 1);
+
+            Transform newStudent = Instantiate(prefabs[student], walkingSpawnPoints[i].position, walkingSpawnPoints[i].rotation);
+
+            newStudent.gameObject.GetComponent<Patrol>().enabled = true;
+
+            newStudent.gameObject.GetComponent<Animator>().runtimeAnimatorController = walkingControllers[Random.Range(0,walkingControllers.Length)];
+        }
+    }
     public void Mezcla<T>(List<T> list)
     {
         int n = list.Count;
@@ -115,6 +133,8 @@ public class GameManager : MonoBehaviour
     {
         return children;
     }
+
+    public Transform[] getWalkingPoints() { return walkingSpawnPoints; }
 
     public void MainSliderState(float volume)
     {
