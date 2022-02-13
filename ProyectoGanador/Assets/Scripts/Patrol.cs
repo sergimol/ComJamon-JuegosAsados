@@ -14,8 +14,11 @@ public class Patrol : MonoBehaviour
 
     float tiempoGiroSuave = 0.1f;
     float velocidadGiroSuave;
+
+    float actualTime = 0f;
+    float threshold = 10f, thresholdTimeToReach = 35f;
     //Jodete danlles
-    Rigidbody rigid;
+    //Rigidbody rigid;
     private void Awake()
     {
         moveSpots = GameManager.instance.getWalkingPoints();
@@ -26,7 +29,7 @@ public class Patrol : MonoBehaviour
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
-        rigid = GetComponent<Rigidbody>();  
+        //rigid = GetComponent<Rigidbody>();  
     }
 
     // Update is called once per frame
@@ -37,20 +40,31 @@ public class Patrol : MonoBehaviour
         Vector2 gotoPos = new Vector2(moveSpots[randomSpot].position.x, moveSpots[randomSpot].position.z);
 
         //Si estamos en el destino...
-        if (Vector2.Distance(pos, gotoPos) < 0.2f)
+        if (Vector2.Distance(pos, gotoPos) < 0.2f || actualTime > thresholdTimeToReach)
         {
             //Paramos la velocidad
-            rigid.velocity = Vector3.zero;
+            //rigid.velocity = Vector3.zero;
             
             //Empezamos a esperar...
             if (waitTime <= 0){
                 //Si ha acabado el tiempo de espera, elegimos un lugar aleatorio nuevo
                 int previousSpot = randomSpot;
-                while (randomSpot == previousSpot){
+                bool isValid = false;
+                int count = 0;
+                while ((randomSpot == previousSpot || !isValid) && count < 30){
                     randomSpot = Random.Range(0, moveSpots.Length);
+                    
+                    isValid = Mathf.Abs(moveSpots[randomSpot].position.x - pos.x) <= threshold;
+                    
+                    isValid = isValid || Mathf.Abs(moveSpots[randomSpot].position.z - pos.y) <= threshold;
+                    
+                    count++;
                 }
+
+                if (count >= 30) Debug.Log("Mal");
                 //Reseteamos futuro tiempo de espera
                 waitTime = startWaitTime;
+                actualTime = 0f;
             }
             else{
                 waitTime -= Time.deltaTime;
@@ -73,6 +87,8 @@ public class Patrol : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, anguloSuave, 0f);
 
             transform.position += dir * Time.deltaTime;
+
+            actualTime += Time.deltaTime;
         }
     }
 }
