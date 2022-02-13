@@ -16,8 +16,6 @@ public class Patrol : MonoBehaviour
     float velocidadGiroSuave;
     //Jodete danlles
     Rigidbody rigid;
-
-    Transform trans;
     private void Awake()
     {
         moveSpots = GameManager.instance.getWalkingPoints();
@@ -29,7 +27,6 @@ public class Patrol : MonoBehaviour
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
         rigid = GetComponent<Rigidbody>();  
-        trans = GetComponent<Transform>();  
     }
 
     // Update is called once per frame
@@ -75,7 +72,7 @@ public class Patrol : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(0f, anguloSuave, 0f);
 
-            rigid.velocity = dir;
+            transform.position += dir * Time.deltaTime;
         }
     }
 }
