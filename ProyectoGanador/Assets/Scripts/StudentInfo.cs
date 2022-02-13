@@ -28,7 +28,6 @@ using UnityEngine;
     {
         if (collision.gameObject.GetComponent<BatHit>() != null)
         {
-            Debug.Log("Hola buenas");
             anim.enabled = false;
             col.enabled = false;
             apatrullando.enabled = false;
