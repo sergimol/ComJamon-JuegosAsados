@@ -103,7 +103,7 @@ public class ClassificationManager : MonoBehaviour
             line.GetChild(1).GetComponent<Image>().color = Color.green;
             line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + auxJ).ToString();
             line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + auxJ].getID().ToString();
-            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + auxJ].getLab().ToString();
+            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + auxJ].getLab()+1).ToString();
             line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + auxJ].getDescription();
             ini = 0;
             posJugador = 0;
@@ -120,7 +120,7 @@ public class ClassificationManager : MonoBehaviour
                 misMuertos = true;
             }
             line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
-            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + j].getLab().ToString();
+            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab()+1).ToString();
             line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + j].getDescription();
             //Debug.Log("Lab " + people[ini + j].getLab() + " " + ini + " " + j);
             if (misMuertos) j++;
@@ -132,7 +132,7 @@ public class ClassificationManager : MonoBehaviour
                 line.GetChild(1).GetComponent<Image>().color = Color.green;
                 line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + j + 1).ToString();
                 line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
-                line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + people[ini + j].getLab().ToString();
+                line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab()+1).ToString();
                 line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + j].getDescription();
             }
         }
