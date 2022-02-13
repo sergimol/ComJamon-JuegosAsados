@@ -4334,6 +4334,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5102240867180702404, guid: fadf8f63ffa4ceb4b836b7906235bc78, type: 3}
+      propertyPath: m_Text
+      value: Has Perdido
+      objectReference: {fileID: 0}
     - target: {fileID: 5102240867642910322, guid: fadf8f63ffa4ceb4b836b7906235bc78, type: 3}
       propertyPath: m_Pivot.x
       value: 0
