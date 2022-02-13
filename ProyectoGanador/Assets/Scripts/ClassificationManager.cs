@@ -53,7 +53,7 @@ public class ClassificationManager : MonoBehaviour
     {
         if (win)
             return;
-
+        AudioManager.instance.Play((AudioManager.ESounds)Random.Range(7, 10));
         people[posJugador].setUpper(false);
 
         if (iD == people[posJugador].getID())
