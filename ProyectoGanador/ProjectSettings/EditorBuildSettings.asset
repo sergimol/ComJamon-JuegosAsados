@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Playground.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
+  - enabled: 1
+    path: Assets/Scenes/Timer.unity
+    guid: 5997c0d6f154e2746af4f6e2ef8b28d5
+  - enabled: 1
+    path: Assets/Scenes/ScoreScene.unity
+    guid: 0ffa1cc2f22a65f4ca579ecb2ebc5ced
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

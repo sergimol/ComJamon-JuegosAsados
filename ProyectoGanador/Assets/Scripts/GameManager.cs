@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField]
     RuntimeAnimatorController[] walkingControllers;
-    [SerializeField]
+
     Transform[] walkingSpawnPoints;
+    
     [SerializeField]
     Transform spawner;
     [SerializeField]
@@ -83,6 +84,14 @@ public class GameManager : MonoBehaviour
 
     void initializeWalkingPeople()
     {
+        GameObject spotPoints = GameObject.Find("Spots");
+
+        walkingSpawnPoints = new Transform[spotPoints.transform.childCount];
+
+        for(int i = 0; i < spotPoints.transform.childCount; i++){
+            walkingSpawnPoints[i] = spotPoints.transform.GetChild(i).transform;
+        }
+        
         for(int i=0; i < walkingSpawnPoints.Length; i++)
         {
             int student = Random.Range(0, prefabs.Count - 1);
@@ -91,7 +100,7 @@ public class GameManager : MonoBehaviour
 
             newStudent.gameObject.GetComponent<Patrol>().enabled = true;
 
-            newStudent.gameObject.GetComponent<Animator>().runtimeAnimatorController = walkingControllers[Random.Range(0,walkingControllers.Length)];
+            newStudent.gameObject.GetComponent<Animator>().runtimeAnimatorController = walkingControllers[Random.Range(0, walkingControllers.Length)];
         }
     }
     public void Mezcla<T>(List<T> list)
