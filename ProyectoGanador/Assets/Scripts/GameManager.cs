@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     int peopleToCreate, labNum;
     [SerializeField]
-    List<Transform> prefabs;
+    List<GameObject> prefabs;
     public float mainVolSlider = 0.2f,
                  SFXVolSlider = 0.2f,
                  musicVolSlider = 0.2f;
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         {
             int student = Random.Range(0, prefabs.Count - 1);
 
-            Transform newStudent = Instantiate(prefabs[student], walkingSpawnPoints[i].position, walkingSpawnPoints[i].rotation);
+            Transform newStudent = Instantiate(prefabs[student].transform, walkingSpawnPoints[i].position, walkingSpawnPoints[i].rotation);
 
             newStudent.gameObject.GetComponent<Patrol>().enabled = true;
 
