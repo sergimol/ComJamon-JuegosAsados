@@ -2974,6 +2974,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetSFXVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 8674113506901442561, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 8674113506906144212, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
