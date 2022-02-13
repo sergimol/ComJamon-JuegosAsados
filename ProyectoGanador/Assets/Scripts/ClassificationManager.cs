@@ -16,7 +16,10 @@ public class ClassificationManager : MonoBehaviour
     [SerializeField]
     GameObject TV;
 
-    bool win = false;
+    [SerializeField]
+    Text scoreText;
+
+    public bool win = false;
 
     private void Awake()
     {
@@ -46,12 +49,6 @@ public class ClassificationManager : MonoBehaviour
         ActTV();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void npcGolpeado(int iD)
     {
         if (win)
@@ -67,7 +64,11 @@ public class ClassificationManager : MonoBehaviour
 
         if (posJugador != -1)
             people[posJugador].setUpper(true);
-        else win = true;
+        else
+        {
+            win = true;
+            scoreText.text = "Has Ganado";
+        }
 
         ActTV();
     }
@@ -103,7 +104,7 @@ public class ClassificationManager : MonoBehaviour
             line.GetChild(1).GetComponent<Image>().color = Color.green;
             line.GetChild(2).GetComponent<TextMeshProUGUI>().text = (ini + auxJ).ToString();
             line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + auxJ].getID().ToString();
-            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + auxJ].getLab()+1).ToString();
+            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + auxJ].getLab() + 1).ToString();
             line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + auxJ].getDescription();
             ini = 0;
             posJugador = 0;
@@ -120,7 +121,7 @@ public class ClassificationManager : MonoBehaviour
                 misMuertos = true;
             }
             line.GetChild(3).GetComponent<TextMeshProUGUI>().text = "ID " + people[ini + j].getID().ToString();
-            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab()+1).ToString();
+            line.GetChild(4).GetComponent<TextMeshProUGUI>().text = "Lab " + (people[ini + j].getLab() + 1).ToString();
             line.GetChild(5).GetComponent<TextMeshProUGUI>().text = people[ini + j].getDescription();
             //Debug.Log("Lab " + people[ini + j].getLab() + " " + ini + " " + j);
             if (misMuertos) j++;
@@ -145,12 +146,12 @@ public class ClassificationManager : MonoBehaviour
             posJugador--;
             AudioManager.instance.Play(AudioManager.ESounds.subirPuesto);
 
-            if(posJugador == 10)
+            if (posJugador == 10)
             {
                 AudioManager.instance.StopAllMusic();
                 AudioManager.instance.Play(AudioManager.ESounds.EuroBeat);
             }
-            else if(posJugador == 5)
+            else if (posJugador == 5)
             {
                 AudioManager.instance.StopAllMusic();
                 AudioManager.instance.Play(AudioManager.ESounds.Apedra);
@@ -161,7 +162,7 @@ public class ClassificationManager : MonoBehaviour
     private void bajarPuesto()
     {
         if (posJugador < people.Count - 1)
-        { 
+        {
             posJugador++;
             AudioManager.instance.Play(AudioManager.ESounds.bajarPuesto);
         }

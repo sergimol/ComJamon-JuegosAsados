@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StudentInfo : MonoBehaviour
+    public class StudentInfo : MonoBehaviour
 {
     [SerializeField]
     string description;
