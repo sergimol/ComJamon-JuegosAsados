@@ -151,10 +151,15 @@ public class GameManager : MonoBehaviour
     public Transform[] getWalkingPoints() 
     {
         //Devuelve los 4 spots correspondientes
-        Transform[] set = new Transform[4];
-        Array.Copy(walkingSpawnPoints, numOfWalkingPeople*4, set, 0, 4);
-            
-        return set; 
+        if (walkingSpawnPoints != null)
+        {
+            Transform[] set = new Transform[4];
+            Array.Copy(walkingSpawnPoints, numOfWalkingPeople * 4, set, 0, 4);
+
+            return set;
+        }
+        
+        return null;
     }
 
     public void MainSliderState(float volume)
