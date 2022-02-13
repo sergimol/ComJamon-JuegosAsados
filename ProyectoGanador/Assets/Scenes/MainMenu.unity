@@ -1025,9 +1025,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213f4d0dc9d8a204e99041a046bff4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionsFirstButton: {fileID: 0}
-  optionsUI: {fileID: 0}
+  optionsFirstButton: {fileID: 1687115817}
+  optionsUI: {fileID: 1687115818}
   mainUI: {fileID: 1373827114}
+  loadingText: {fileID: 1889694458}
 --- !u!114 &853229941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1239,7 +1240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1373827115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1794,6 +1795,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 853229939}
     m_Modifications:
+    - target: {fileID: 8674113505376996099, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 853229941}
+    - target: {fileID: 8674113505376996099, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674113505581311751, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 853229941}
+    - target: {fileID: 8674113505581311751, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMasterVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 8674113505957422346, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
       propertyPath: m_Name
       value: OptionsMenu
@@ -1881,6 +1898,22 @@ PrefabInstance:
     - target: {fileID: 8674113505957422349, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674113506310468923, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 853229941}
+    - target: {fileID: 8674113506310468923, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674113506336478673, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 853229941}
+    - target: {fileID: 8674113506336478673, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5b4849a0c72450469bd5be6831aefc0, type: 3}
@@ -2209,7 +2242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1889694459
 RectTransform:
   m_ObjectHideFlags: 0

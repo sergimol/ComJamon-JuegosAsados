@@ -22,5 +22,6 @@ public class TriggerLab : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         lab.enabled = true;
+        AudioManager.instance.Play(AudioManager.ESounds.eoweo);
     }
 }

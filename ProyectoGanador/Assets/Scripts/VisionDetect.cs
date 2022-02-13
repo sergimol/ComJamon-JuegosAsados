@@ -20,6 +20,7 @@ public class VisionDetect : MonoBehaviour
             //Visible code here
             GameManager.instance.ResetLabo(lab);
             Debug.Log("Reseteado");
+            AudioManager.instance.Stop(AudioManager.ESounds.eoweo);
             this.enabled = false;
         }
         /*else
