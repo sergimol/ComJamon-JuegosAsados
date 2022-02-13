@@ -2028,7 +2028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: La callada de clase
-  iD: 1
+  iD: 7
 --- !u!114 &4880036876427153889
 MonoBehaviour:
   m_ObjectHideFlags: 0
