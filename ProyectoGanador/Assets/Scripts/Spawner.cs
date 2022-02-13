@@ -29,12 +29,12 @@ public class Spawner : MonoBehaviour
         if (person == null) return;
         if (this.transform.childCount == 6)     //CAMBIARLO CUANDO HAYA MAS OBJETOS EN UN SPAWN
         {
-            this.transform.GetChild(0).position = this.transform.position;
-            this.transform.GetChild(0).rotation = new Quaternion(0, 0, 0, 0);
-            this.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            this.transform.GetChild(0).gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
-            this.transform.GetChild(0).gameObject.GetComponent<Animator>().enabled = true;
-            this.transform.GetChild(0).gameObject.GetComponent<SphereCollider>().enabled = true;
+            this.transform.GetChild(5).position = this.transform.position;
+            this.transform.GetChild(5).rotation = new Quaternion(0, 0, 0, 0);
+            this.transform.GetChild(5).gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            this.transform.GetChild(5).gameObject.GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
+            this.transform.GetChild(5).gameObject.GetComponent<Animator>().enabled = true;
+            this.transform.GetChild(5).gameObject.GetComponent<SphereCollider>().enabled = true;
         }
         else
             Instantiate(person, this.transform.position, this.transform.rotation, this.transform);
