@@ -9,7 +9,7 @@ public class Patrol : MonoBehaviour
     float waitTime;
     public float startWaitTime;
 
-    public Transform[] moveSpots;
+    Transform[] moveSpots;
     private int randomSpot;
 
     float tiempoGiroSuave = 0.1f;
@@ -17,12 +17,17 @@ public class Patrol : MonoBehaviour
 
     Rigidbody rigid;
 
+    private void Awake()
+    {
+        moveSpots = GameManager.instance.getWalkingPoints();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
-        rigid = GetComponent<Rigidbody>();
+        rigid = GetComponent<Rigidbody>();  
     }
 
     // Update is called once per frame
