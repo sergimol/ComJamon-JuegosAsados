@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.instance.Play(AudioManager.ESounds.tintontin1);
         Random.InitState((int)DateTime.Now.Ticks);
         InicializarPeople();
         initializeWalkingPeople();
