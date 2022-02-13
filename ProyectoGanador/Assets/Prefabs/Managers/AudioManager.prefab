@@ -179,7 +179,7 @@ MonoBehaviour:
   - name: EuroBeat
     clip: {fileID: 8300000, guid: b05cb3dbc01277748a725617cbef2bee, type: 3}
     mixer: {fileID: -4144811885614589727, guid: 41c72716e56af5d49942631c76568f9c, type: 2}
-    volume: 1
+    volume: 0.7
     loop: 1
     source: {fileID: 0}
   - name: Perder
