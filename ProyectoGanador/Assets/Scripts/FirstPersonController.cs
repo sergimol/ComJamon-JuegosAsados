@@ -128,21 +128,23 @@ namespace StarterAssets
         private void CameraRotation()
         {
             // if there is an input
-            
-            //Don't multiply mouse input by Time.deltaTime
-            float deltaTimeMultiplier = 1.0f;
+            if (_input.look.sqrMagnitude >= _threshold)
+            {
+                //Don't multiply mouse input by Time.deltaTime
+                float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 
-            _cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
-            _rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
+                _cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
+                _rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
 
-            // clamp our pitch rotation
-            //_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+                // clamp our pitch rotation
+                _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
 
-            // Update Cinemachine camera target pitch
-            CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
+                // Update Cinemachine camera target pitch
+                CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
 
-            // rotate the player left and right
-            transform.Rotate(Vector3.up * _rotationVelocity);
+                // rotate the player left and right
+                transform.Rotate(Vector3.up * _rotationVelocity);
+            }
         }
 
         private void Move()
@@ -193,7 +195,7 @@ namespace StarterAssets
                 }
                 else
                     stepTimer -= Time.deltaTime;
-
+                
                 //bool nextStep = true;
                 //int i = 11;
                 //while(nextStep && i  <= 16)
@@ -293,7 +295,7 @@ namespace StarterAssets
             if (_input.pause)
             {
                 _input.pause = false;
-                // Es un poco raro lo sï¿½ pero no queria hacer 1409594 if elses
+                // Es un poco raro lo sé pero no queria hacer 1409594 if elses
                 GameManager.instance.needToPause = !GameManager.instance.gameIsPaused;
                 GameManager.instance.needToResume = GameManager.instance.gameIsPaused;
             }
